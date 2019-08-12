@@ -1,0 +1,23 @@
+.imageSize {
+    height: 500px;
+    width: 500px;
+}
+#artistImageDiv {
+    height: 700px;
+    width: 550px;
+    /* float: left;
+    display: block; */
+}
+
+#artistPlayerDiv {
+    height: 700px;
+    width: 550px;
+    /* float: right;
+    display: block; */
+}
+
+body {
+    /* margin-left: 35px;
+    margin-right: 35px; */
+    background-image: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg")
+}
