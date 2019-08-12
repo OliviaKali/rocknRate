@@ -36,25 +36,25 @@ function searchArtist(userInput) {
     console.log(response)
     
     $("#artistPlayerDiv").html(
-      `<div class="tile is-ancestor">
-          <div class="tile is-vertical is-8">
-            <div class="tile">
-              <div class="tile is-parent is-vertical">
-                <article class="tile is-child box">
-                  <p class="title">Spotify</p>
-                  <p class="subtitle">Top Left</p>
-                  <iframe src="https://open.spotify.com/embed/artist/${response.id}" width="300"
-                      height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                  </article>
+      // <div class="tile is-ancestor">
+      //     <div class="tile is-vertical is-8">
+      //       <div class="tile">
+      //         <div class="tile is-parent is-vertical">
+      //           <article class="tile is-child box">
+      //             <p class="title">Spotify</p>
+      //             <p class="subtitle">Top Left</p>
+                  `<iframe src="https://open.spotify.com/embed/artist/${response.id}" width="650"
+                      height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
+      //             </article>
                  
-      </div>`
+      // </div>
     );
 
     $("#artistImageDiv").html(
               `<article class="tile is-child box">
               <p class="title ">${response.name}</p>
               <img id="artistImage" class="imageSize" src="${response.image}" />
-        </figure>
+              <p>Genres: ${response.genres}</p>
       </article>`
     );
 

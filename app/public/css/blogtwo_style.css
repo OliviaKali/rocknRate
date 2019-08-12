@@ -10,8 +10,13 @@
 }
 
 #artistPlayerDiv {
-    height: 700px;
-    width: 550px;
+    margin-top: 10px;
+    height: 420px;
+    width: 250px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    margin-right: 10px;
     /* float: right;
     display: block; */
 }
