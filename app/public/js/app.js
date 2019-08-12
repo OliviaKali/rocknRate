@@ -1,5 +1,3 @@
-80 lines (70 sloc)  2.15 KB
-    
 $(document).ready(function() {
   var searchInput = $.getUrlVar('s');
   if (null !== searchInput) {
