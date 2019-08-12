@@ -13,7 +13,12 @@ var Blog = sequelize.define("blog", {
   blogBody: Sequelize.TEXT,
   created_at: Sequelize.DATE,
   artist: Sequelize.STRING
-});
+}, 
+{
+  freezeTableName: true
+}
+
+);
 
 // Syncs with DB
 Blog.sync();

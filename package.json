@@ -1,5 +1,5 @@
 {
-  "name": "rocknRate",
+  "name": "rocknrate",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -24,6 +24,8 @@
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
     "node-spotify-api": "^1.1.1",
+    "passport": "^0.4.0",
+    "passport-spotify": "^1.1.0",
     "sequelize": "^5.13.1"
   }
 }
