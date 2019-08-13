@@ -1,28 +1,19 @@
-.imageSize {
-    height: 500px;
-    width: 500px;
-}
-#artistImageDiv {
-    height: 700px;
-    width: 550px;
-    /* float: left;
-    display: block; */
+body {
+    background-image: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg")
 }
 
-#artistPlayerDiv {
+#artistImageDiv{
     margin-top: 10px;
-    height: 420px;
-    width: 250px;
-    padding: 20px;
+
+}
+
+.spotifyPlayer {
+    margin-top: 10px;
+    /* padding: 20px; */
     background: white;
     border-radius: 10px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
     /* float: right;
     display: block; */
-}
-
-body {
-    /* margin-left: 35px;
-    margin-right: 35px; */
-    background-image: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg")
+    margin-left: 10px;
 }

@@ -22,7 +22,6 @@ var url = "/artist?s=" + encodeURIComponent(userInput);
     var userInput = $("#userInput")
       .val()
       .trim();
-
     searchArtist(userInput);
   });
 });
@@ -44,7 +43,7 @@ function searchArtist(userInput) {
       //           <article class="tile is-child box">
       //             <p class="title">Spotify</p>
       //             <p class="subtitle">Top Left</p>
-                  `<iframe src="https://open.spotify.com/embed/artist/${response.id}" width="650"
+                  `<iframe  class="spotifyPlayer" src="https://open.spotify.com/embed/artist/${response.id}" width="650"
                       height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
       //             </article>
                  
