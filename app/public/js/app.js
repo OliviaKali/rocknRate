@@ -21,7 +21,6 @@ var url = "/artist?s=" + encodeURIComponent(userInput);
     var userInput = $("#userInput")
       .val()
       .trim();
-
     searchArtist(userInput);
   });
 });
