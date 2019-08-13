@@ -52,7 +52,7 @@ module.exports = function(app) {
       artist: req.body.artist
     }).then(function(results) {
       // `results` here would be the newly created chirp
-      res.end();
+      res.json(results)
     });
   });
 
