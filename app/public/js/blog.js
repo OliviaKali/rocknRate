@@ -66,7 +66,7 @@ function displayBlog(data) {
       row.addClass("blog");
 
       row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
-      row.append("<p>" + data[i].blogRating + " rated.. </p>");
+      row.append("<p>Rating: " + data[i].blogRating + " </p>");
       row.append("<p>" + data[i].blogBody + "</p>");
       row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
       row.append("<p>" + data[i].artist + "</p>");
