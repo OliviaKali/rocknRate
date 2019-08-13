@@ -81,7 +81,6 @@ function displayBlog(data) {
 function createForm(data) {
   // create html form
   $("#blogComments").html(
-  //thi
   ` <div class="row">
   <div class="col-sm-5 col-sm-offset-2" style="color: white">
 
@@ -101,6 +100,10 @@ function createForm(data) {
 
 <div class="col-sm-2 col-sm-offset-2"></div>
 
+</div>
+<hr>
+<div col-sm-5 col-sm-offset-2" style="color: white">
+<h2>Blog Entries</h2>
 </div>`
   );
 
