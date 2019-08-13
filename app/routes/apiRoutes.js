@@ -2,9 +2,8 @@ var router = require("express").Router();
 require("dotenv").config();
 var keys = require("../../keys");
 var Spotify = require("node-spotify-api");
-
 router.post("/api/search", function(req, res) {
-  var spotify = new Spotify(keys.spotify);
+var spotify = new Spotify(keys.spotify);
 
   spotify
     .search({ type: "artist", query: req.body.artist, limit: 3 })
