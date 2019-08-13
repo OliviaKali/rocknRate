@@ -32,3 +32,7 @@ p {
 .col-sm-offset-2 {
   float: right;
 }
+
+#blog-area {
+  margin-top: 10px;
+}
