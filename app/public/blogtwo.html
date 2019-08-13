@@ -158,19 +158,58 @@
                     <p class="title">Unknown Usage</p>
                     <p class="subtitle">Tall column</p>
                     <div class="content">
-                        <p>
-                            Login in to add to your favorites.
-                            <button>Log into spotify</button>
-                        </p>
-                        <p>
-                            Add a comment and rating to Artist Name.
-                            Link to /blog/:artistName
-                        </p>
-
+                        <p class="title">Unknown Usage</p>
+                        <p class="subtitle">Tall column</p>
+                        <div class="content">
+                            <p>
+                                Login in to add to your favorites.
+                                <button>Log into spotify</button>
+                            </p>
+                            <p>
+                           Add a comment and rating to Artist Name.
+                           Link to /blog/:artistName
+                            </p>
+                    <button id="get-blog">Go to blog</button>
+                        </div>
                     </div>
+                </article>
+            </div>
+            <div id="blogComments" class="container-fluid">
+            </div>
+            <div class="row">
+                    <div class="col-sm-5 col-sm-offset-2" style="color: white">
+          
+                    <h2>Blogger Name:</h2>
+                    <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+                    <br>
+          
+                    <h2>Rating:</h2>
+                    <input class="form-control" type="text" id="rating" placeholder="Enter Your Rating">
+                    <br>
+          
+                    <h2>Artist:</h2>
+                    <input class="form-control" type="text" id="artist" placeholder="Enter Your Artist">
+                    <br>
+          
+                    <h2>Blog Entry:</h2>
+                    <textarea class="form-control" rows="3" id="blog-box" placeholder="Enter Blog Here!"></textarea>
+          
+                    <button id="blog-submit" class="btn btn-lg pull-right">Submit!</button>
+                  </div>
+          
+                  <div class="col-sm-2 col-sm-offset-2"></div>
+          
+                  <div class="col-sm-5 col-sm-offset-2" style="color: white">
+                    <h2>Blog Entries</h2>
+                    <hr>
+                    <div id="blog-area"></div>
+                  </div>
                 </div>
-            </article>
-        </div>
+
+
+
+
+
         <!-- </div> -->
         </div>
         </div>
@@ -187,7 +226,9 @@
             </div>
         </footer>
     <!-- Javascript Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./js/app.js"></script>
+    <script type="text/javascript" src="js/blog.js"></script>
 </body>
 
 </html>
