@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // $("blogPosts").hide();
   var searchInput = $.getUrlVar('s');
   if (null !== searchInput) {
     var decodedSearch = decodeURIComponent(searchInput)
@@ -77,6 +78,7 @@ $.extend({
   }
 });
 
+
 $("#get-blog").on("click", function(event) {
   var routeName = $(".title").attr("value")
   console.log(routeName)
@@ -86,5 +88,6 @@ $("#get-blog").on("click", function(event) {
     url: `/blog/${routeName}`
   }).then(function(result) {
     console.log(result)
+    // $("blogPosts").show();
   })
 })
