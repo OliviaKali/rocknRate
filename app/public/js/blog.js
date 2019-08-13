@@ -67,26 +67,14 @@ function displayBlog(data) {
       row.addClass("blog");
 
       $(".blog").html(
-`<div class="card">
-  <header class="card-header">
-    <p class="card-header-title">
-      ${data[i].blogAuthor} blogged...
-    </p>
-  </header>
-  <div class="card-content">
-    <div class="content">
-      <p>Rating: ${data[i].blogRating}</p>
-      <p>${data[i].blogBody}</p>
-      <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
-    </div>
-  </div>`
+
       )
 
-      // row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-      // row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
-      // row.append("<p>Rating: " + data[i].blogRating + " </p>");
-      // row.append("<p>" + data[i].blogBody + "</p>");
-      // // row.append("<p>" + data[i].artist + "</p>");
+      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
+      row.append("<p>Rating: " + data[i].blogRating + " </p>");
+      row.append("<p>" + data[i].blogBody + "</p>");
+      // row.append("<p>" + data[i].artist + "</p>");
 
       $("#blog-area").prepend(row);
 
