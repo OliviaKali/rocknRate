@@ -66,10 +66,6 @@ function displayBlog(data) {
       var row = $("<div>");
       row.addClass("blog");
 
-      $(".blog").html(
-
-      )
-
       row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
       row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
       row.append("<p>Rating: " + data[i].blogRating + " </p>");
