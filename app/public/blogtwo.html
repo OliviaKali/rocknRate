@@ -95,58 +95,14 @@
         <!-- Tiles -->
         <div class="container is-fluid">
             <div class="tile">
-                    <!-- <div class="tile is-vertical is-8"> -->
-                            <div id="artistImageDiv" class="tile is-parent">
-       
-            <!-- <div class="tile is-vertical is-8">
-                <div class="tile">
-                    <div class="tile is-parent is-vertical margin-left">
-                        <article class="tile is-child box">
-                            <p class="title">Spotify</p>
-                            <p class="subtitle">Top Left</p>
-                            <iframe src="https://open.spotify.com/embed/artist/6FBDaR13swtiWwGhX1WQsP" width="600rem"
-                                height="3.5rem" frameborder="0" allowtransparency="true"
-                                allow="encrypted-media"></iframe>
-                        </article> -->
+                    
+        <div id="artistPlayerDiv" class="tile is-ancestor">
+
                     </div>
-                    <div id="artistPlayerDiv" class="tile is-ancestor">
-                        <!-- <article class="tile is-child box">
-                            <p class="title ">Artist Image</p>
-                            <p class="subtitle">Image</p>
-                            <figure class="image is-4by3">
-                            <img id="artistImage" src="${response.imageUrl}" />
-                      </figure>
-                    </article> -->
+                    <div id="artistImageDiv" class="tile is-parent">
+     
                     </div>
-                <!-- <div class="tile is-parent margin-left">
-                    <article class="tile is-child box">
-                        <p class="title">Blog/Comments</p>
-                        <p class="subtitle">Aligned with the right column</p>
-                        <div class="content">
-                            <article class="media">
-                                <figure class="media-left">
-                                    <p class="image is-64x64">
-                                        <img src="https://bulma.io/images/placeholders/128x128.png" />
-                                    </p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="field">
-                                        <p class="control">
-                                            <textarea class="textarea" placeholder="Add a comment..."></textarea>
-                                        </p>
-                                    </div>
-                                    <nav class="level">
-                                        <div class="level-left">
-                                            <div class="level-item">
-                                                <a class="button is-info">Submit</a>
-                                            </div>
-                                        </div>
-                                    </nav>
-                                </div>
-                            </article>
-                        </div>
-                    </article>
-                </div> -->
+
             </div>
             <div class="tile is-parent margin-right">
                 <article class="tile is-child box">
@@ -162,11 +118,46 @@
                            Add a comment and rating to Artist Name.
                            Link to /blog/:artistName
                             </p>
-                    
+                    <button id="get-blog">Go to blog</button>
                         </div>
                     </div>
                 </article>
             </div>
+
+            <div class="row">
+                    <div class="col-sm-5 col-sm-offset-2" style="color: white">
+          
+                    <h2>Blogger Name:</h2>
+                    <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+                    <br>
+          
+                    <h2>Rating:</h2>
+                    <input class="form-control" type="text" id="rating" placeholder="Enter Your Rating">
+                    <br>
+          
+                    <h2>Artist:</h2>
+                    <input class="form-control" type="text" id="artist" placeholder="Enter Your Artist">
+                    <br>
+          
+                    <h2>Blog Entry:</h2>
+                    <textarea class="form-control" rows="3" id="blog-box" placeholder="Enter Blog Here!"></textarea>
+          
+                    <button id="blog-submit" class="btn btn-lg pull-right">Submit!</button>
+                  </div>
+          
+                  <div class="col-sm-2 col-sm-offset-2"></div>
+          
+                  <div class="col-sm-5 col-sm-offset-2" style="color: white">
+                    <h2>Blog Entries</h2>
+                    <hr>
+                    <div id="blog-area"></div>
+                  </div>
+                </div>
+
+
+
+
+
         <!-- </div> -->
         </div>
     </div>
@@ -185,6 +176,7 @@
     </section>
     <!-- Javascript Links -->
     <script src="./js/app.js"></script>
+    <script type="text/javascript" src="js/blog.js"></script>
 </body>
 
 </html>

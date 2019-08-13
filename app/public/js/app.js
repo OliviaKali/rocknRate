@@ -52,7 +52,7 @@ function searchArtist(userInput) {
 
     $("#artistImageDiv").html(
               `<article class="tile is-child box">
-              <p class="title ">${response.name}</p>
+              <p class="title" value="${response.name}">${response.name}</p>
               <img id="artistImage" class="imageSize" src="${response.image}" />
               <p>Genres: ${response.genres}</p>
       </article>`
@@ -77,3 +77,15 @@ $.extend({
     return $.getUrlVars()[name];
   }
 });
+
+$("#get-blog").on("click", function(event) {
+  var routeName = $(".title").attr("value")
+  console.log(routeName)
+
+  $.ajax({
+    method: "GET",
+    url: `/blog/${routeName}`
+  }).then(function(result) {
+    console.log(result)
+  })
+})

@@ -1,5 +1,7 @@
 /* global moment */
 
+var moment = require("moment");
+
 // When user clicks add-btn
 $("#blog-submit").on("click", function(event) {
   event.preventDefault();
