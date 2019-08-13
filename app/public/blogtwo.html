@@ -19,31 +19,74 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Background IMG -->
-    <style>
-        /* .hero {
-            background: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg") center;
-        } */
-        /* .margin-left {
-            margin-left: 35px;
-        }
-        .margin-right {
-            margin-right: 35px;
-        } */
-    </style>
 </head>
 <!-- Body -->
 
 <body>
-    <!-- Background/Section for the whole page -->
-    <section class="hero is-fullheight">
+
+        <section class="hero is-dark is-small">
+                <!-- Hero head: will stick at the top -->
+                <div class="hero-head">
+                  <nav class="navbar">
+                    <div class="container">
+                      <div class="navbar-brand">
+                        <a class="navbar-item">
+                          <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </span>
+                      </div>
+                      <div id="navbarMenuHeroA" class="navbar-menu">
+                        <div class="navbar-end">
+                          <a class="navbar-item is-active">
+                            Home
+                          </a>
+                          <a class="navbar-item">
+                            Examples
+                          </a>
+                          <a class="navbar-item">
+                            Documentation
+                          </a>
+                          <span class="navbar-item">
+                            <a class="button is-primary is-inverted">
+                              <span class="icon">
+                                <i class="fab fa-github"></i>
+                              </span>
+                              <span>Download</span>
+                            </a>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              
+                <!-- Hero content: will be in the middle -->
+                <div class="hero-body">
+                  <div class="container has-text-centered">
+                    <h1 class="title">
+                      Artist
+                    </h1>
+                    <h2 class="subtitle">
+                      Rate your favorite artists
+                    </h2>
+                  </div>
+                </div>
+              
+                <!-- Hero footer: will stick at the bottom -->
+                
+              </section>
         <!-- NavBar -->
-        <nav class="navbar is-transparent">
+        <!-- <nav class="navbar is-transparent">
             <div class="navbar-brand">
                 <a class="navbar-item" href="./index.html">
                     <p class="subtitle is-size-2">RocknRate</p>
-                </a>
+                </a> -->
                 <!-- Mobile Responsive Burger -->
-                <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <!-- <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,28 +97,29 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
 
-                            <div class="column">
-                                    <div class="control has-icons-left">
-                                        <input id="userInput" class="input is-info is-rounded is-medium" type="text" name="artist" placeholder="Artist Name">
-                                        <span class="icon is-left">
-                                            <i class="fas fa-headphones"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- Button -->
-                                <div class="column">
-                                    <p class="buttons">
-                                        <a class="button is-rounded is-medium">
-                                            <span class="icon">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                            <button id="userSearch">Search</button>
-                                        </a>
-                                    </p>
-                                </div>
+                        <div class="column">
+                            <div class="control has-icons-left">
+                                <input id="userInput" class="input is-info is-rounded is-medium" type="text"
+                                    name="artist" placeholder="Artist Name">
+                                <span class="icon is-left">
+                                    <i class="fas fa-headphones"></i>
+                                </span>
+                            </div>
+                        </div> -->
+                        <!-- Button -->
+                        <!-- <div class="column">
+                            <p class="buttons">
+                                <a class="button is-rounded is-medium">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                    <button id="userSearch">Search</button>
+                                </a>
+                            </p>
+                        </div> -->
 
 
-                        <a class="navbar-item" href="./blogtwo.html">
+                        <!-- <a class="navbar-item" href="./blogtwo.html">
                             <i class="fas fa-headphones"></i>
                         </a>
                         <div class="navbar-item has-dropdown is-hoverable">
@@ -91,85 +135,45 @@
                     </div>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <!-- Tiles -->
-        <div class="container is-fluid">
-            <div class="tile">
-                    <!-- <div class="tile is-vertical is-8"> -->
-                            <div id="artistImageDiv" class="tile is-parent">
-       
-            <!-- <div class="tile is-vertical is-8">
-                <div class="tile">
-                    <div class="tile is-parent is-vertical margin-left">
-                        <article class="tile is-child box">
-                            <p class="title">Spotify</p>
-                            <p class="subtitle">Top Left</p>
-                            <iframe src="https://open.spotify.com/embed/artist/6FBDaR13swtiWwGhX1WQsP" width="600rem"
-                                height="3.5rem" frameborder="0" allowtransparency="true"
-                                allow="encrypted-media"></iframe>
-                        </article> -->
-                    </div>
-                    <div id="artistPlayerDiv" class="tile is-ancestor">
-                        <!-- <article class="tile is-child box">
-                            <p class="title ">Artist Image</p>
-                            <p class="subtitle">Image</p>
-                            <figure class="image is-4by3">
-                            <img id="artistImage" src="${response.imageUrl}" />
-                      </figure>
-                    </article> -->
-                    </div>
-                <!-- <div class="tile is-parent margin-left">
-                    <article class="tile is-child box">
-                        <p class="title">Blog/Comments</p>
-                        <p class="subtitle">Aligned with the right column</p>
-                        <div class="content">
-                            <article class="media">
-                                <figure class="media-left">
-                                    <p class="image is-64x64">
-                                        <img src="https://bulma.io/images/placeholders/128x128.png" />
-                                    </p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="field">
-                                        <p class="control">
-                                            <textarea class="textarea" placeholder="Add a comment..."></textarea>
-                                        </p>
-                                    </div>
-                                    <nav class="level">
-                                        <div class="level-left">
-                                            <div class="level-item">
-                                                <a class="button is-info">Submit</a>
-                                            </div>
-                                        </div>
-                                    </nav>
-                                </div>
-                            </article>
+        <div class="container">
+            <div class="tile is-ancestor">
+                    <div id="artistPlayerDiv" class="tile is-parent">
+                            <div class="tile is-child box">
+        
+                            </div>
                         </div>
-                    </article>
-                </div> -->
+                <div id="artistImageDiv" class="tile is-parent">
+                    <div class="tile is-child box">
+
+                    </div>
+                </div>
             </div>
-            <div class="tile is-parent margin-right">
-                <article class="tile is-child box">
+        </div>
+        
+        <div class="tile is-parent margin-right">
+            <article class="tile is-child box">
+                <div class="content">
+                    <p class="title">Unknown Usage</p>
+                    <p class="subtitle">Tall column</p>
                     <div class="content">
-                        <p class="title">Unknown Usage</p>
-                        <p class="subtitle">Tall column</p>
-                        <div class="content">
-                            <p>
-                                Login in to add to your favorites.
-                                <button>Log into spotify</button>
-                            </p>
-                            <p>
-                           Add a comment and rating to Artist Name.
-                           Link to /blog/:artistName
-                            </p>
-                    
-                        </div>
+                        <p>
+                            Login in to add to your favorites.
+                            <button>Log into spotify</button>
+                        </p>
+                        <p>
+                            Add a comment and rating to Artist Name.
+                            Link to /blog/:artistName
+                        </p>
+
                     </div>
-                </article>
-            </div>
+                </div>
+            </article>
+        </div>
         <!-- </div> -->
         </div>
-    </div>
+        </div>
         <!-- Footer -->
         <footer class="footer">
             <div class="content has-text-centered">
@@ -182,7 +186,6 @@
                 </p>
             </div>
         </footer>
-    </section>
     <!-- Javascript Links -->
     <script src="./js/app.js"></script>
 </body>
