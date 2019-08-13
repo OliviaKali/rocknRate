@@ -12,7 +12,7 @@
     <!-- FontAwesome Style Sheet -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- CSS Styling -->
@@ -20,6 +20,7 @@
         body {
             background: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg") center;
         }
+
         .center {
             display: flex;
             justify-content: center;
@@ -69,7 +70,8 @@
             <div class="columns">
                 <div class="column">
                     <div class="control has-icons-left">
-                        <input id="userInput" class="input is-info is-rounded is-medium" type="text" name="artist" placeholder="Artist Name">
+                        <input id="userInput" class="input is-info is-rounded is-medium" type="text" name="artist"
+                            placeholder="Artist Name">
                         <span class="icon is-left">
                             <i class="fas fa-headphones"></i>
                         </span>
@@ -77,14 +79,13 @@
                 </div>
                 <!-- Button -->
                 <div class="column">
-                    <p class="buttons">
-                        <a class="button is-rounded is-medium" id="userSearch" type="submit" value="Search" >
-                            <span class="icon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                            <button id="userSearch">Search</button>
-                        </a>
-                    </p>
+
+                    <a class="button is-rounded is-medium" id="userSearch">
+                        <span class="icon is-small">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </a>
+
                 </div>
             </div>
         </section>
