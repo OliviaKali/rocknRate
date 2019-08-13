@@ -1,6 +1,7 @@
 // When user clicks add-btn
-$("#blog-submit").on("click", function(event) {
+$(document).on("click", "#blog-submit", function(event) {
   event.preventDefault();
+  var routeName = $(".title").attr("value")
 
   // Make a newChirp object
   var newBlog = {
@@ -8,8 +9,10 @@ $("#blog-submit").on("click", function(event) {
     rating: $("#rating").val().trim(),
     body: $("#blog-box").val().trim(),
     created_at: moment().format("YYYY-MM-DD HH:mm:ss"),
-    artist: $("#artist").val().trim()
+    artist: routeName
   };
+
+  console.log(newBlog)
 
   console.log(newBlog);
 
@@ -78,32 +81,27 @@ function displayBlog(data) {
 function createForm(data) {
   // create html form
   $("#blogComments").html(
-  
-  `<div class="row">
-      <div class="col-md-12 list-container">
-          <div class="card noteCard" style="width: 30rem;">
-              <div class="card-body">
-                  <h5 class="card-title">Add a Comment</h5>
-                  <form>
-                      <div class="form-group">
-                          <label for="exampleFormControlInput1"></label>
-                          <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
-                      </div>
-                      <div class="form-group">
-                      <label for="exampleFormControlInput1"></label>
-                      <input class="form-control" type="text" id="rating" placeholder="Enter Your Rating">
-                  </div>
-                  <div class="form-group">
-                  <label for="exampleFormControlInput1"></label>
-                  <input class="form-control" type="text" id="artist" placeholder="Enter Your Artist">
-              </div>
-                      <div class="form-group">
-                          <label for="exampleFormControlTextarea1"></label>
-                          <textarea class="form-control" rows="3" id="blog-box" placeholder="Enter Blog Here!"></textarea>
-                      </div>
-                  </form>
-                  <button id="blog-submit" type="button" class="btn btn-outline-secondary submit-note">Add Comment</button>
-              </div>`
+  //thi
+  ` <div class="row">
+  <div class="col-sm-5 col-sm-offset-2" style="color: white">
+
+  <h2>Blogger Name:</h2>
+  <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+  <br>
+
+  <h2>Rating:</h2>
+  <input class="form-control" type="text" id="rating" placeholder="Enter Your Rating">
+  <br>
+
+  <h2>Blog Entry:</h2>
+  <textarea class="form-control" rows="3" id="blog-box" placeholder="Enter Blog Here!"></textarea>
+
+  <button id="blog-submit" class="btn btn-lg pull-right">Submit!</button>
+</div>
+
+<div class="col-sm-2 col-sm-offset-2"></div>
+
+</div>`
   );
 
 }
