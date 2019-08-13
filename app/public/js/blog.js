@@ -111,13 +111,6 @@ function createForm(data) {
 }
 
 
-// button click function 
-
-// grab values from input field
-
-// take all those put them into an object
-
-// post object to api/new
 
 
 

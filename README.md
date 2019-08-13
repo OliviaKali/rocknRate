@@ -4,7 +4,7 @@ Music blog that provides users with a unique experience to search their favorite
 
 ## Built with
 
-Node, Express, MySQL, Spotify API, sequelize, Bulma, materlize, passport, node-spotify-api
+Node, Express, MySQL, Spotify API, sequelize, Bulma, materlize, passport, 
 
 
 ## Features
@@ -12,6 +12,8 @@ Node, Express, MySQL, Spotify API, sequelize, Bulma, materlize, passport, node-s
 
 
 ## Code
+
+MVC design- folder structure
 
 
 
