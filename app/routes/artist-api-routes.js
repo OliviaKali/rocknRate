@@ -5,7 +5,7 @@
 const passport = require("passport");
 const SpotifyStrategy = require('passport-spotify').Strategy;
 require("dotenv").config();
-const keys = require("../../keys");
+const keys = require("../../keys.js");
 var newProfile = {};
 
 // console.log(keys.spotify.id);
@@ -21,9 +21,9 @@ var newProfile = {};
 passport.use(
   new SpotifyStrategy(
     {
-      clientID: keys.SPOTIFY_ID,
-      clientSecret: keys.SPOTIFY_SECRET,
-      callbackURL: '/callback' 
+      clientID: keys.spotify.id,
+      clientSecret: keys.spotify.secret,
+      callbackURL: '/callback'
     },
     function(accessToken, refreshToken, expires_in, profile, done) {
       process.nextTick(function(req, res){
