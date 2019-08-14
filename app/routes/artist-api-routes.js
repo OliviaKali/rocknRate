@@ -23,7 +23,7 @@ passport.use(
     {
       clientID: keys.SPOTIFY_ID,
       clientSecret: keys.SPOTIFY_SECRET,
-      callbackURL: 'http://localhost:8080/callback' || '/callback' 
+      callbackURL: '/callback' 
     },
     function(accessToken, refreshToken, expires_in, profile, done) {
       process.nextTick(function(req, res){
@@ -82,7 +82,7 @@ app.get('/logout', function (req, res) {
   // ));
 
   app.get('/callback', passport.authenticate('spotify'), function (req,res) {
-    res.redirect("http://localhost:8080/");
+    res.redirect("/");
   })
 
   
