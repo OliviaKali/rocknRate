@@ -54,8 +54,8 @@ function searchArtist(userInput) {
               `<article class="tile is-child box">
               <p class="title" value="${response.name}">${response.name}</p>
               <img id="artistImage" class="imageSize" src="${response.image}" />
-              <p>Genres: ${response.genres}</p>
       </article>`
+      // <p>Genres: ${response.genres}</p>
     );
 
   });
@@ -85,7 +85,7 @@ if (response.id)
     Playlists URL: 
     <a class="playlists" href = "${response.profileUrl}">${response.profileUrl}</a>
     <br>
-    <button id = "logOut">Log out of spotify</button>
+    <button id = "logOut" class="button is-black">Log out of spotify</button>
 </article>`
 );
 
