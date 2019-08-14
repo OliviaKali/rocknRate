@@ -1,6 +1,6 @@
-body {
+/* body {
     background-image: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg")
-}
+} */
 
 #artistImageDiv{
     margin-top: 10px;
@@ -9,7 +9,6 @@ body {
 
 .spotifyPlayer {
     margin-top: 10px;
-<<<<<<< HEAD
 
     background: white;
     border-radius: 10px;
@@ -19,20 +18,21 @@ body {
 
 #blogLogin {
     color: white;
-<<<<<<< HEAD
-=======
-    /* padding: 20px; */
-    background: white;
-    border-radius: 10px;
-=======
->>>>>>> 2821db7cf92c1cb1fb3fa3a0d62f14c2837a8a55
     /* margin-right: 10px; */
     /* float: right;
     display: block; */
     margin-left: 10px;
-<<<<<<< HEAD
->>>>>>> master
-=======
 
->>>>>>> 2821db7cf92c1cb1fb3fa3a0d62f14c2837a8a55
+}
+
+#rocknrate{
+    font-family: 'Pacifico', cursive;
+    color:white;
+}
+#nav1{
+    color:white;
+}
+#nav2{
+    color:white;
+    font-family: 'Pacifico', cursive;
 }
