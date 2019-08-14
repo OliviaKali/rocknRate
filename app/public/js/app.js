@@ -34,6 +34,7 @@ $(location).attr('href', "/auth/spotify");
 }
 )
 
+
 function searchArtist(userInput) {
   console.log(userInput)
   $.ajax({
@@ -70,6 +71,13 @@ function searchArtist(userInput) {
 
   });
 }
+$("#logOut").on("click", function() {
+  event.preventDefault();
+  // var url = window.location.origin;
+  // alert(url);
+$(location).attr('href', "/logout");
+}
+)
 $.get("/profileInfo", function(req, res) 
 {
   
@@ -84,9 +92,20 @@ if (response.id)
     <p class="emails">Email: ${response._json.email}</p>
     Playlists URL: 
     <a class="playlists" href = "${response.profileUrl}">${response.profileUrl}</a>
+    <br>
+    <button id = "logOut">Log out of spotify</button>
 </article>`
+
+
   
 );
+$("#logOut").on("click", function() {
+  event.preventDefault();
+  // var url = window.location.origin;
+  // alert(url);
+$(location).attr('href', "/logout");
+}
+)
 }
 })
 

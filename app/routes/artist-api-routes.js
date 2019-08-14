@@ -60,6 +60,11 @@ app.get('/profileInfo', function (req, res) {
   res.json(newProfile);
 });
 
+app.get('/logout', function (req, res) {
+  req.logout();
+  newProfile = {};
+  res.redirect("/");
+});
   app.get('/auth/spotify', passport.authenticate('spotify', {
     scope: ['user-read-email']
 }
