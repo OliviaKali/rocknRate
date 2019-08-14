@@ -9,6 +9,17 @@ body {
 
 .spotifyPlayer {
     margin-top: 10px;
+<<<<<<< HEAD
+
+    background: white;
+    border-radius: 10px;
+
+    margin-left: 10px;
+}
+
+#blogLogin {
+    color: white;
+=======
     /* padding: 20px; */
     background: white;
     border-radius: 10px;
@@ -16,4 +27,5 @@ body {
     /* float: right;
     display: block; */
     margin-left: 10px;
+>>>>>>> master
 }
