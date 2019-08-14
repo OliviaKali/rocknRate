@@ -2,6 +2,9 @@
 
 Music blog that provides users with a unique experience to search their favorite artists and be able to comment/rate them as well as listen to their songs through the spotify API and read some information about them all in the same place. Experience can be personalized by spotify authentication and logging into spotify.
 
+https://rocknrates.herokuapp.com
+
+
 ## Built with
 
 Node, Express, MySQL, Spotify API, sequelize, Bulma, materlize, passport, 
