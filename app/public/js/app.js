@@ -7,7 +7,7 @@ $(document).ready(function() {
   }
 
   //executed on first page and searchbar on second page
-  $("#userSearchNav").on("click", function() {
+  $("#userSearch").on("click", function() {
     event.preventDefault();
     var userInput = $("#userInput")
       .val()
