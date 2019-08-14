@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  // $("blogPosts").hide();
+  
   var searchInput = $.getUrlVar('s');
   if (null !== searchInput) {
     var decodedSearch = decodeURIComponent(searchInput)
@@ -60,6 +60,45 @@ function searchArtist(userInput) {
 
   });
 }
+
+$("#logIn").on("click", function() {
+  event.preventDefault();
+  // var url = window.location.origin;
+  // alert(url);
+$(location).attr('href', "/auth/spotify");
+}
+)
+
+
+$.get("/profileInfo", function(req, res) 
+{
+  
+}).then(function(response){
+ 
+if (response.id)
+{
+  $("#passportDiv").html(
+    `<article class="tile is-child box">
+    <p class="title ">Welcome: ${response.displayName}</p>
+    <p class="followers ">Current Followers: ${response.followers}</p>
+    <p class="emails">Email: ${response._json.email}</p>
+    Playlists URL: 
+    <a class="playlists" href = "${response.profileUrl}">${response.profileUrl}</a>
+    <br>
+    <button id = "logOut">Log out of spotify</button>
+</article>`
+);
+
+$("#logOut").on("click", function() {
+  event.preventDefault();
+  // var url = window.location.origin;
+  // alert(url);
+$(location).attr('href', "/logout");
+}
+)
+}
+})
+
 
 $.extend({
   getUrlVars: function(){

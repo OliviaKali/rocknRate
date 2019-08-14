@@ -1,15 +1,7 @@
-
-
-
-// var db = require("../models");
+var db = require("../models");
 const passport = require("passport");
 const SpotifyStrategy = require('passport-spotify').Strategy;
-require("dotenv").config();
-const keys = require("../../keys.js");
 var newProfile = {};
-
-// console.log(keys.spotify.id);
-// console.log(keys.spotify.secret);
 // var User = {
 //   findOrCreate: function(obj) {
 //     if (obj)
@@ -21,17 +13,13 @@ var newProfile = {};
 passport.use(
   new SpotifyStrategy(
     {
-      clientID: keys.spotify.id,
-      clientSecret: keys.spotify.secret,
-      callbackURL: 'http://localhost:8080/callback'
+      clientID: "d50ce48e78f34aa39c48d92fb71b19d1",
+      clientSecret: "e9aa1cb7fb41429da0a797966b92fbff",
+      callbackURL: 'http://localhost:8080/auth/spotify/callback'
     },
     function(accessToken, refreshToken, expires_in, profile, done) {
-      process.nextTick(function(req, res){
-        newProfile = profile;
-        // var newProfile = {
-        //   name: profile.id
-        // }
-        // console.log(newProfile);
+      process.nextTick(function(){
+        console.log(profile);
         return done(null, profile);
         
       });
@@ -59,30 +47,16 @@ module.exports = function(app) {
     });
   });
 
-app.get('/profileInfo', function (req, res) {
-  res.json(newProfile);
-});
-
-app.get('/logout', function (req, res) {
-  req.logout();
-  newProfile = {};
-  res.redirect("/");
-});
   app.get('/auth/spotify', passport.authenticate('spotify', {
-    scope: ['user-read-email']
-}
-  // The request will be redirected to spotify for authentication, so this
-  // function will not be called.
-));
-  // app.get('/auth/spotify', passport.authenticate('spotify', {
-  //     scope: ['user-read-email']
-  // }
-  //   // The request will be redirected to spotify for authentication, so this
-  //   // function will not be called.
-  // ));
+      scope: ['user-read-email']
+  }
+    // The request will be redirected to spotify for authentication, so this
+    // function will not be called.
+  ));
 
-  app.get('/callback', passport.authenticate('spotify'), function (req,res) {
-    res.redirect("http://localhost:8080/");
+  app.get('/auth/spotify/callback', passport.authenticate('spotify'), function (req,res) {
+    res.send("Callback");
+
   })
 
   
@@ -119,5 +93,3 @@ app.get('/logout', function (req, res) {
 
   
 };
-
-// module.exports (newProfile);
