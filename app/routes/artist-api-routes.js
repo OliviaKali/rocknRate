@@ -21,8 +21,8 @@ var newProfile = {};
 passport.use(
   new SpotifyStrategy(
     {
-      clientID: keys.spotify.id,
-      clientSecret: keys.spotify.secret,
+      clientID: keys.SPOTIFY_ID,
+      clientSecret: keys.SPOTIFY_SECRET,
       callbackURL: 'http://localhost:8080/callback'
     },
     function(accessToken, refreshToken, expires_in, profile, done) {
