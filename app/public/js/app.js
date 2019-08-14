@@ -36,18 +36,8 @@ function searchArtist(userInput) {
     console.log(response)
     
     $("#artistPlayerDiv").html(
-      // <div class="tile is-ancestor">
-      //     <div class="tile is-vertical is-8">
-      //       <div class="tile">
-      //         <div class="tile is-parent is-vertical">
-      //           <article class="tile is-child box">
-      //             <p class="title">Spotify</p>
-      //             <p class="subtitle">Top Left</p>
                   `<iframe  class="spotifyPlayer" src="https://open.spotify.com/embed/artist/${response.id}" width="650"
                       height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
-      //             </article>
-                 
-      // </div>
     );
 
     $("#artistImageDiv").html(

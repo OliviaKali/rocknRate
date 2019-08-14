@@ -23,17 +23,11 @@ $(document).on("click", "#blog-submit", function(event) {
 
       var row = $("<div>");
       row.addClass("blog");
-      row.append(`<div class="column is-full">
-      <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
-     <p>${data[i].blogAuthor} blogged...</p>
-     <p>Rating: ${data[i].blogRating}</p>
-    <p>${data[i].blogBody}</p>
-    </div>`)
 
-      // row.append("<p>At " + moment(newBlog.created_at).format("h:mma on dddd") + "</p>");
-      // row.append("<p>" + newBlog.author + " blogged.. </p>");
-      // row.append("<p>Rating" + newBlog.rating + " </p>");
-      // row.append("<p>" + newBlog.body + "</p>");
+      row.append("<p>At " + moment(newBlog.created_at).format("h:mma on dddd") + "</p>");
+      row.append("<p>" + newBlog.author + " blogged.. </p>");
+      row.append("<p>Rating" + newBlog.rating + " </p>");
+      row.append("<p>" + newBlog.body + "</p>");
       
       // row.append("<p>" + newBlog.artist + "</p>");
 
@@ -73,7 +67,7 @@ function displayBlog(data) {
       row.addClass("blog");
       row.append(`<div class="column is-full">
       <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
-     <p>${data[i].blogAuthor} blogged...</p>
+     <p>${data[i].blogAuthor}blogged...</p>
      <p>Rating: ${data[i].blogRating}</p>
     <p>${data[i].blogBody}</p>
     </div>`)
@@ -108,7 +102,7 @@ function createForm(data) {
   <h2>Blog Entry:</h2>
   <textarea class="textarea" id="blog-box" placeholder="Enter Blog Here!"></textarea>
 
-  <button id="blog-submit" class="btn btn-lg pull-right">Submit!</button>
+  <button id="blog-submit" class="button is-black">Submit!</button>
 </div>
 
 <div class="col-sm-2 col-sm-offset-2"></div>
