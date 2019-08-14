@@ -5,7 +5,7 @@
 const passport = require("passport");
 const SpotifyStrategy = require('passport-spotify').Strategy;
 require("dotenv").config();
-const keys = require("../../keys.js");
+const keys = require("../../keys");
 var newProfile = {};
 
 // console.log(keys.spotify.id);
