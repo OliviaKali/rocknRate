@@ -16,13 +16,13 @@ var url = "/artist?s=" + encodeURIComponent(userInput);
       $(location).attr('href',url);
   });
 
-  $("#userSearchNav").on("click", function() {
-    event.preventDefault();
-    var userInput = $("#userInput")
-      .val()
-      .trim();
-    searchArtist(userInput);
-  });
+  // $("#userSearchNav").on("click", function() {
+  //   event.preventDefault();
+  //   var userInput = $("#userInput")
+  //     .val()
+  //     .trim();
+  //   searchArtist(userInput);
+  // });
 });
 
 function searchArtist(userInput) {
