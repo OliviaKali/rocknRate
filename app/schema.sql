@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS `sequelize_blog`;
-CREATE DATABASE `sequelize_blog`;
+DROP DATABASE IF EXISTS `sd0yq40nkode021i`;
+CREATE DATABASE `sd0yq40nkode021i`;
