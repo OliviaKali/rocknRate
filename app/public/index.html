@@ -12,12 +12,14 @@
     <!-- FontAwesome Style Sheet -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- CSS Styling -->
     <style>
-        body {
+        .hero {
             background: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg") center;
         }
 
@@ -25,6 +27,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        #rocknrate{
+            font-family: 'Pacifico', cursive;
         }
     </style>
 </head>
@@ -37,7 +42,7 @@
         <nav class="navbar is-transparent">
             <div class="navbar-brand">
                 <a class="navbar-item" href="./index.html">
-                    <p class="subtitle is-size-2">RocknRate</p>
+                    <p class="subtitle is-size-1" id="rocknrate">RocknRate</p>
                 </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                     <span></span>
@@ -48,17 +53,14 @@
             <div id="navbarExampleTransparentExample" class="navbar-menu">
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <a class="navbar-item" href="./blogtwo.html">
+                        <a class="navbar-item is-size-4" href="./blogtwo.html">
                             <i class="fas fa-headphones"></i>
                         </a>
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
-                                More
-                            </a>
-                            <div class="navbar-dropdown is-boxed">
-                                <a class="navbar-item" href="../public/about.html">
-                                    About
-                                </a>
+                        <a class="navbar-item is-size-5" href="./blogtwo.html">
+                            About
+                        </a>
+                        
+                            
                             </div>
                         </div>
                     </div>
@@ -70,7 +72,7 @@
             <div class="columns">
                 <div class="column">
                     <div class="control has-icons-left">
-                        <input id="userInput" class="input is-info is-rounded is-medium" type="text" name="artist"
+                        <input id="userInput" class="input is-primary is-rounded is-medium" type="text" name="artist"
                             placeholder="Artist Name">
                         <span class="icon is-left">
                             <i class="fas fa-headphones"></i>

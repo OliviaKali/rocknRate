@@ -1,6 +1,6 @@
-body {
+/* body {
     background-image: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg")
-}
+} */
 
 #artistImageDiv{
     margin-top: 10px;
@@ -16,4 +16,8 @@ body {
     /* float: right;
     display: block; */
     margin-left: 10px;
+}
+
+#rocknrate{
+    font-family: 'Pacifico', cursive;
 }
