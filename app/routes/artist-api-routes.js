@@ -82,7 +82,7 @@ app.get('/logout', function (req, res) {
   // ));
 
   app.get('/callback', passport.authenticate('spotify'), function (req,res) {
-    res.redirect("/");
+    res.redirect("https://rocknrates.herokuapp.com/");
   })
 
   
