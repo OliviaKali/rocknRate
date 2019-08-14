@@ -23,7 +23,7 @@ passport.use(
     {
       clientID: keys.spotify.id,
       clientSecret: keys.spotify.secret,
-      callbackURL: '/callback'
+      callbackURL: 'https://rocknrates.herokuapp.com/callback'
     },
     function(accessToken, refreshToken, expires_in, profile, done) {
       process.nextTick(function(req, res){
