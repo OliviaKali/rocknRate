@@ -9,7 +9,6 @@
 
 .spotifyPlayer {
     margin-top: 10px;
-<<<<<<< HEAD
 
     background: white;
     border-radius: 10px;
@@ -19,27 +18,21 @@
 
 #blogLogin {
     color: white;
-<<<<<<< HEAD
-=======
-    /* padding: 20px; */
-    background: white;
-    border-radius: 10px;
-=======
->>>>>>> 2821db7cf92c1cb1fb3fa3a0d62f14c2837a8a55
     /* margin-right: 10px; */
     /* float: right;
     display: block; */
     margin-left: 10px;
-<<<<<<< HEAD
+
 }
 
 #rocknrate{
     font-family: 'Pacifico', cursive;
-=======
-<<<<<<< HEAD
->>>>>>> master
-=======
-
->>>>>>> 2821db7cf92c1cb1fb3fa3a0d62f14c2837a8a55
->>>>>>> d58bb8e392b4f65c29a8582750ca9a9660d757fc
+    color:white;
+}
+#nav1{
+    color:white;
+}
+#nav2{
+    color:white;
+    font-family: 'Pacifico', cursive;
 }

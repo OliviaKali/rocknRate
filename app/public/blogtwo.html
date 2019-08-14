@@ -14,14 +14,13 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <!-- CSS Stylesheet -->
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
     <link rel="stylesheet" href="css/blogtwo_style.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Background IMG -->
     <style>
         .hero {
-            background: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg") center;
+            background: url("./images/headphones.jpg") center;
         }
 
         .center {
@@ -70,10 +69,10 @@
                                 </span>
                             </a>
                         </div>
-                        <a class="navbar-item is-size-4" href="./blogtwo.html">
+                        <a class="navbar-item is-size-4" id="nav1" href="./blogtwo.html">
                             <i class="fas fa-headphones"></i>
                         </a>
-                        <a class="navbar-item is-size-5" href="./about.html">
+                        <a class="navbar-item is-size-5" id="nav2" href="./about.html">
                             About
                         </a>
                     </div>
@@ -93,18 +92,18 @@
                 <div>
                     <article>
                         <div class="content">
-                           
 
-                            <div id="passportDiv" class="content" >
+
+                            <div id="passportDiv" class="content">
                                 <h1 style="color: white">Login in to Spotify.
-                                
+
                                     <button id="logIn" class="button is-black">Log into Spotify</button></h1>
-                                </div>
-                                <div id="blogLogin" class="content" >
+                            </div>
+                            <div id="blogLogin" class="content">
                                 <h1 style="color: white">Leave a comment about this artist. View other comments.
-                                    
+
                                     <button id="get-blog" class="button is-black">Go to blog</button></h1>
-                                    
+
                             </div>
                         </div>
                     </article>
@@ -112,39 +111,22 @@
 
                 <div class="columns">
                     <div class="column is-full">
-                    <div id="blogComments" class="container-fluid">
+                        <div id="blogComments" class="container-fluid">
+                        </div>
+                        <div class="row">
+
+
+                            <div class="blogPosts col-sm-5 col-sm-offset-2" style="color: white">
+                                <hr>
+                                <div id="blog-area"></div>
+                                <br>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row">
-    
-    
-                        <div class="blogPosts col-sm-5 col-sm-offset-2" style="color: white">
-                            <hr>
-                            <div id="blog-area"></div>
-                            <br>
-                        </div>
-                        </div>
-                  </div>
-           
+
                 </div>
             </div>
         </div>
-        </div>
-        <!-- </div> -->
-        </div>
-        </div>
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <p>
-                    <strong>RocknRate</strong> by
-                    <a href="https://github.com/OliviaKali/Rate-That-Artist">
-                        Jon Cheshire, Matt Maliaros, Olivia
-                        Kalinowski, Patrick Moroney
-                        and Mackenzie Balisage</a>
-                </p>
-            </div>
-            </div>
-            
         <!-- Footer -->
         <footer class="footer">
             <div class="content has-text-centered">
@@ -159,10 +141,10 @@
         </footer>
     </section>
     <!-- Javascript Links -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./js/app.js"></script>
     <script type="text/javascript" src="js/blog.js"></script>
-    
+
 </body>
 
 </html>
