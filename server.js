@@ -42,6 +42,8 @@ passport.deserializeUser(function(obj, done) {
 // =============================================================
 require("./app/routes/html-routes.js")(app);
 require("./app/routes/api-blogRoutes.js")(app);
+require('./app/routes/artist-api-routes.js')(app);
+
 
 app.use(apiRoutes)
 
