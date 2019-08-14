@@ -55,27 +55,23 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
 
-                            <div class="column">
-                                    <div class="control has-icons-left">
-                                        <input id="userInput" class="input is-info is-rounded is-medium" type="text" name="artist" placeholder="Artist Name">
-                                        <span class="icon is-left">
-                                            <i class="fas fa-headphones"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- Button -->
-                                <div class="column">
-                                    <p class="buttons">
-                                        <a class="button is-rounded is-medium">
-                                            <span class="icon">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                            <button id="userSearch">Search</button>
-                                        </a>
-                                    </p>
-                                </div>
-
-
+                        <div class="column">
+                            <div class="control has-icons-left">
+                                <input id="userInput" class="input is-info is-rounded is-medium" type="text"
+                                    name="artist" placeholder="Artist Name">
+                                <span class="icon is-left">
+                                    <i class="fas fa-headphones"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="column">
+                            <a class="button is-rounded is-medium" id="userSearchNav">
+                                <span class="icon is-small">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </a>
+                        </div>
                         <a class="navbar-item" href="./blogtwo.html">
                             <i class="fas fa-headphones"></i>
                         </a>
@@ -84,7 +80,7 @@
                                 More
                             </a>
                             <div class="navbar-dropdown is-boxed">
-                                <a class="navbar-item" href="/about">
+                                <a class="navbar-item" href="../public/about.html">
                                     About
                                 </a>
                             </div>
@@ -94,57 +90,59 @@
             </div>
         </nav>
         <!-- Tiles -->
-        <div class="container is-fluid">
-            <div class="tile">
-                    
-        <div id="artistPlayerDiv" class="tile is-ancestor">
+        <div class="container">
+            <div class="tile is-ancestor">
+                <div id="artistImageDiv" class="tile is-parent">
 
-                    </div>
-                    <div id="artistImageDiv" class="tile is-parent">
-     
-                    </div>
-
+                </div>
+                <div id="artistPlayerDiv" class="tile is-parent">
+                </div>
             </div>
-            <div class="tile is-parent margin-right">
-                <article class="tile is-child box">
-                    <div class="content">
-                        <p class="title">Unknown Usage</p>
-                        <p class="subtitle">Tall column</p>
-                        
+            <div>
+                <div>
+                    <article>
                         <div class="content">
-                            <p>
-                                Login in to add to your favorites.
-                                <button>Log into spotify</button>
-                            </p>
-                            <p>
-                           Add a comment and rating to Artist Name.
-                           Link to /blog/:artistName
-                            </p>
-                    <button id="get-blog">View all Comments</button>
+                           
+
+                            <div id="blogLogin" class="content">
+                                <h1>Login in to add to your favorites.
+                                    <button>Log into spotify</button></h1>
+                                    <button id="get-blog" class="button is-black">Go to blog</button></h1>
+                                    
+                                <h1>Leave a comment about this artist. View Comments made.
+                                    
+                                    <button id="get-blog" class="button is-black">Go to blog</button></h1>
+                                    
+                            </div>
                         </div>
-                    </div>
-                </article>
-            </div>
-            <div id="blogComments" class="container-fluid">
-            </div>
-            <div class="row">
- 
-          
-                  <div class="blogPosts col-sm-5 col-sm-offset-2" style="color: white">
-                    <hr>
-                    <div id="blog-area"></div>
-                    <br>
-                  </div>
+                    </article>
                 </div>
 
-
-
-
-
-  
-                <!-- </div> -->
+                <div class="columns">
+                    <div class="column is-full">
+                    <div id="blogComments" class="container-fluid">
+                    </div>
+                    <div class="row">
+    
+    
+                        <div class="blogPosts col-sm-5 col-sm-offset-2" style="color: white">
+                            <hr>
+                            <div id="blog-area"></div>
+                            <br>
+                        </div>
+                        </div>
+                  </div>
+           
+                </div>
+            </div>
         </div>
-    </div>
+        </div>
+
+
+        <!-- </div> -->
+            </div>
+            </div>
+            
         <!-- Footer -->
         <footer class="footer">
             <div class="content has-text-centered">

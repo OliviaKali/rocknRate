@@ -23,11 +23,17 @@ $(document).on("click", "#blog-submit", function(event) {
 
       var row = $("<div>");
       row.addClass("blog");
+      row.append(`<div class="column is-full">
+      <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
+     <p>${data[i].blogAuthor} blogged...</p>
+     <p>Rating: ${data[i].blogRating}</p>
+    <p>${data[i].blogBody}</p>
+    </div>`)
 
-      row.append("<p>At " + moment(newBlog.created_at).format("h:mma on dddd") + "</p>");
-      row.append("<p>" + newBlog.author + " blogged.. </p>");
-      row.append("<p>Rating" + newBlog.rating + " </p>");
-      row.append("<p>" + newBlog.body + "</p>");
+      // row.append("<p>At " + moment(newBlog.created_at).format("h:mma on dddd") + "</p>");
+      // row.append("<p>" + newBlog.author + " blogged.. </p>");
+      // row.append("<p>Rating" + newBlog.rating + " </p>");
+      // row.append("<p>" + newBlog.body + "</p>");
       
       // row.append("<p>" + newBlog.artist + "</p>");
 
@@ -65,12 +71,18 @@ function displayBlog(data) {
 
       var row = $("<div>");
       row.addClass("blog");
+      row.append(`<div class="column is-full">
+      <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
+     <p>${data[i].blogAuthor} blogged...</p>
+     <p>Rating: ${data[i].blogRating}</p>
+    <p>${data[i].blogBody}</p>
+    </div>`)
 
-      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-      row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
-      row.append("<p>Rating: " + data[i].blogRating + " </p>");
-      row.append("<p>" + data[i].blogBody + "</p>");
-      // row.append("<p>" + data[i].artist + "</p>");
+      // row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+      // row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
+      // row.append("<p>Rating: " + data[i].blogRating + " </p>");
+      // row.append("<p>" + data[i].blogBody + "</p>");
+      // // row.append("<p>" + data[i].artist + "</p>");
 
       $("#blog-area").prepend(row);
 
