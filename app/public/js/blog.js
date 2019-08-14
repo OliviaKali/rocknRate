@@ -23,11 +23,17 @@ $(document).on("click", "#blog-submit", function(event) {
 
       var row = $("<div>");
       row.addClass("blog");
+      row.append(`<div class="column is-full">
+      <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
+     <p>${data[i].blogAuthor} blogged...</p>
+     <p>Rating: ${data[i].blogRating}</p>
+    <p>${data[i].blogBody}</p>
+    </div>`)
 
-      row.append("<p>At " + moment(newBlog.created_at).format("h:mma on dddd") + "</p>");
-      row.append("<p>" + newBlog.author + " blogged.. </p>");
-      row.append("<p>Rating" + newBlog.rating + " </p>");
-      row.append("<p>" + newBlog.body + "</p>");
+      // row.append("<p>At " + moment(newBlog.created_at).format("h:mma on dddd") + "</p>");
+      // row.append("<p>" + newBlog.author + " blogged.. </p>");
+      // row.append("<p>Rating" + newBlog.rating + " </p>");
+      // row.append("<p>" + newBlog.body + "</p>");
       
       // row.append("<p>" + newBlog.artist + "</p>");
 
@@ -65,12 +71,18 @@ function displayBlog(data) {
 
       var row = $("<div>");
       row.addClass("blog");
+      row.append(`<div class="column is-full">
+      <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
+     <p>${data[i].blogAuthor} blogged...</p>
+     <p>Rating: ${data[i].blogRating}</p>
+    <p>${data[i].blogBody}</p>
+    </div>`)
 
-      row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-      row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
-      row.append("<p>Rating: " + data[i].blogRating + " </p>");
-      row.append("<p>" + data[i].blogBody + "</p>");
-      // row.append("<p>" + data[i].artist + "</p>");
+      // row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+      // row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
+      // row.append("<p>Rating: " + data[i].blogRating + " </p>");
+      // row.append("<p>" + data[i].blogBody + "</p>");
+      // // row.append("<p>" + data[i].artist + "</p>");
 
       $("#blog-area").prepend(row);
 
@@ -86,15 +98,15 @@ function createForm(data) {
   <div class="col-sm-5 col-sm-offset-2" style="color: white">
 
   <h2>Blogger Name:</h2>
-  <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+  <input class="input" type="text" id="author" placeholder="Enter Your Name">
   <br>
 
   <h2>Rating:</h2>
-  <input class="form-control" type="text" id="rating" placeholder="Enter Your Rating">
+  <input class="input" type="text" id="rating" placeholder="Enter Your Rating">
   <br>
 
   <h2>Blog Entry:</h2>
-  <textarea class="form-control" rows="3" id="blog-box" placeholder="Enter Blog Here!"></textarea>
+  <textarea class="textarea" id="blog-box" placeholder="Enter Blog Here!"></textarea>
 
   <button id="blog-submit" class="btn btn-lg pull-right">Submit!</button>
 </div>
@@ -111,13 +123,6 @@ function createForm(data) {
 }
 
 
-// button click function 
-
-// grab values from input field
-
-// take all those put them into an object
-
-// post object to api/new
 
 
 
