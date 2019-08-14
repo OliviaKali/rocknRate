@@ -1,9 +1,7 @@
-// When user clicks add-btn
 $(document).on("click", "#blog-submit", function(event) {
   event.preventDefault();
   var routeName = $(".title").attr("value")
 
-  // Make a newChirp object
   var newBlog = {
     author: $("#author").val().trim(),
     rating: $("#rating").val().trim(),
@@ -11,12 +9,8 @@ $(document).on("click", "#blog-submit", function(event) {
     created_at: moment().format("YYYY-MM-DD HH:mm:ss"),
     artist: routeName
   };
-
   console.log(newBlog)
 
-  console.log(newBlog);
-
-  // Send an AJAX POST-request with jQuery
   $.post("/api/new", newBlog)
     // On success, run the following code
     .then(function() {
@@ -35,7 +29,6 @@ $(document).on("click", "#blog-submit", function(event) {
       // row.append("<p>" + newBlog.author + " blogged.. </p>");
       // row.append("<p>Rating" + newBlog.rating + " </p>");
       // row.append("<p>" + newBlog.body + "</p>");
-      
       // row.append("<p>" + newBlog.artist + "</p>");
 
       $("#blog-area").prepend(row);
@@ -50,8 +43,6 @@ $(document).on("click", "#blog-submit", function(event) {
 });
 
 // When the page loads, grab all of our chirps
-
-
 $("#get-blog").on("click", function(event) {
   var routeName = $(".title").attr("value")
   console.log(routeName)
@@ -120,7 +111,6 @@ function createForm(data) {
 <h2>Blog Entries</h2>
 </div>`
   );
-
 }
 
 

@@ -1,23 +1,9 @@
-
-
-
-// var db = require("../models");
 const passport = require("passport");
 const SpotifyStrategy = require('passport-spotify').Strategy;
 require("dotenv").config();
 const keys = require("../../keys.js");
 var newProfile = {};
 
-// console.log(keys.spotify.id);
-// console.log(keys.spotify.secret);
-// var User = {
-//   findOrCreate: function(obj) {
-//     if (obj)
-//     {
-//       res.redirect("/public/index.html");
-//     }
-//   }
-// }
 passport.use(
   new SpotifyStrategy(
     {
@@ -28,24 +14,12 @@ passport.use(
     function(accessToken, refreshToken, expires_in, profile, done) {
       process.nextTick(function(req, res){
         newProfile = profile;
-        // var newProfile = {
-        //   name: profile.id
-        // }
-        // console.log(newProfile);
         return done(null, profile);
         
       });
     }
   )
 );
-// var user = new User({
-//   name: profile.d,
-//   email: profile.emails[0].value,
-//   username: profile.username,
-//   provider: 'spotify',
-//   //now in the future searching on User.findOne({'facebook.id': profile.id } will match because of this next line
-//   facebook: profile._json
-// })
 
 module.exports = function(app) {
   app.get("/api/artists", function(req, res) {
@@ -74,12 +48,6 @@ app.get('/logout', function (req, res) {
   // The request will be redirected to spotify for authentication, so this
   // function will not be called.
 ));
-  // app.get('/auth/spotify', passport.authenticate('spotify', {
-  //     scope: ['user-read-email']
-  // }
-  //   // The request will be redirected to spotify for authentication, so this
-  //   // function will not be called.
-  // ));
 
   app.get('/callback', passport.authenticate('spotify'), function (req,res) {
     res.redirect("https://rocknrates.herokuapp.com/");
@@ -119,5 +87,3 @@ app.get('/logout', function (req, res) {
 
   
 };
-
-// module.exports (newProfile);

@@ -14,7 +14,6 @@ $(document).ready(function() {
       .trim();
 var url = "/artist?s=" + encodeURIComponent(userInput);
       $(location).attr('href',url);
-    // searchArtist(userInput);
   });
 
   $("#userSearchNav").on("click", function() {
@@ -53,8 +52,6 @@ function searchArtist(userInput) {
 
 $("#logIn").on("click", function() {
   event.preventDefault();
-  // var url = window.location.origin;
-  // alert(url);
 $(location).attr('href', "/auth/spotify");
 }
 )
@@ -81,8 +78,6 @@ if (response.id)
 
 $("#logOut").on("click", function() {
   event.preventDefault();
-  // var url = window.location.origin;
-  // alert(url);
 $(location).attr('href', "/logout");
 }
 )
@@ -117,6 +112,5 @@ $("#get-blog").on("click", function(event) {
     url: `/blog/${routeName}`
   }).then(function(result) {
     console.log(result)
-    // $("blogPosts").show();
   })
 })

@@ -5,9 +5,6 @@ var Spotify = require("node-spotify-api");
 router.post("/api/search", function(req, res) {
   var spotify = new Spotify(keys.spotify);
 
-// router.post("/api/search", function(req, res) {
-//   var spotify = new Spotify(keys.spotify);
-
   spotify
     .search({ type: "artist", query: req.body.artist, limit: 3 })
     .then(function(response) {
