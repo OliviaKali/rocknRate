@@ -2,19 +2,22 @@
 
 Music blog that provides users with a unique experience to search their favorite artists and be able to comment/rate them as well as listen to their songs through the spotify API and read some information about them all in the same place. Experience can be personalized by spotify authentication and logging into spotify.
 
+
+Check out our website!
 https://rocknrates.herokuapp.com
 
 
 ## Built with
 
-Node, Express, MySQL, Spotify API, sequelize, Bulma, materlize, passport
+Node, Express, MySQL, Spotify API, Sequelize, Bulma, Materialize, Passport, Spotify-Passport
 
 
 <!-- ## Features -->
 
 ## Code
 
-MVC design- folder structure
+MVC Folder Structure to keep files organized
+
 
 
 
@@ -25,8 +28,19 @@ Spotify API used for image, artist name, and id which is used to identify artist
 
 ### Database/ MySQL
 
+Database used to allow users to leave comments and rating about their favorite artists on the searched artist page.
+The user is prompted to fill out their name, rating, and comment/blog entry. The table has another column with the artist name that is populated with artist name from the html page, which gets it from the spotify search after the user searches for that artist. This allows the comments to be displayed on the same page as the artist instead of having the all the comments displayed on one artist page.
 
-Database links to a page that allows users to leave comments about their favorite artists.
+	var routeName = $(".title").attr("value")
+
+	artist: routeName
+
+ ```app.get("/blog/:artistName", function(req, res) {
+    Blog.findAll({
+      where: {
+        artist: req.params.artistName
+      }
+    })```
 
 ### Future Development
 <ul>
@@ -40,4 +54,4 @@ Database links to a page that allows users to leave comments about their favorit
 
 # Credits
 
-Jon Cheshire, Matt Maliaros, Olivia Kalinowski, Patrick Moroney and Mackenzie Balisage
+Jon Cheshire, Matt Maliaros, Olivia Kalinowski, Patrick Moroney, and Mackenzie Balisage
