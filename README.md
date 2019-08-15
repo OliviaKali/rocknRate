@@ -7,12 +7,10 @@ https://rocknrates.herokuapp.com
 
 ## Built with
 
-Node, Express, MySQL, Spotify API, sequelize, Bulma, materlize, passport, 
+Node, Express, MySQL, Spotify API, sequelize, Bulma, materlize, passport
 
 
-## Features
-
-
+<!-- ## Features -->
 
 ## Code
 
@@ -20,9 +18,10 @@ MVC design- folder structure
 
 
 
+
 ### APIs
 
-Spotify API used for image, genres, id which is used to identify artist in the spotify player, and artist Name
+Spotify API used for image, artist name, and id which is used to identify artist to display artist's songs on the spotify player. 
 
 ### Database/ MySQL
 
