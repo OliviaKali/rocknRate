@@ -25,14 +25,18 @@ Spotify API used for image, artist name, and id which is used to identify artist
 
 ### Database/ MySQL
 
+
 Database links to a page that allows users to leave comments about their favorite artists.
 
 ### Future Development
-
-Create Artist Page for new artists to be able to add information about themselves.
-Create feature on the index.html to link html page where new/unknown artists are featured.
-	-Ratings
-		-Average the rates together at the top of the page instead of just having separate rating on each comment
+<ul>
+<li>Create Artist Page for local/unknown artists to be able to add profile pages about themselves</li>
+<li>Create feature that displays new artists, where you can search by genre to find new music</li>
+<li>Only allow Rating to be 1-5 stars - average rating displayed</li>
+<li>Connect to BandsinTown API to display concert details for each artist/ Use an API to include brief bio about each artist</li>
+<li>Local Users - Passport</li>
+<li>Allow logged in users to add Favorites</li>
+<ul>
 
 # Credits
 
