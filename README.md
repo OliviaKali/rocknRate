@@ -26,7 +26,8 @@ Spotify key is hidden through .env and added to heroku to be able to deploy it w
 Database used to allow users to leave comments and rating about their favorite artists on the searched artist page.
 The user is prompted to fill out their name, rating, and comment/blog entry. The table has another column with the artist name that is populated with artist name from the html page, which gets it from the spotify search after the user searches for that artist. This allows the comments to be displayed on the same page as the artist instead of having the all the comments displayed on one artist page.
 
-	```var routeName = $(".title").attr("value")
+	```
+	var routeName = $(".title").attr("value")
 
 	artist: routeName
 	
@@ -46,7 +47,8 @@ The user is prompted to fill out their name, rating, and comment/blog entry. The
 <li>Connect to BandsinTown API to display concert details for each artist/ Use an API to include brief bio about each artist</li>
 <li>Local Users - Passport</li>
 <li>Allow logged in users to add Favorites</li>
-<ul>
+</ul>
+
 
 # Credits
 
