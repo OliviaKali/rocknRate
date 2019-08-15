@@ -19,9 +19,6 @@ Node, Express, MySQL, Spotify API, Sequelize, Bulma, Materialize, Passport, Spot
 MVC Folder Structure to keep files organized
 
 
-
-
-
 ### APIs
 
 Spotify API used for image, artist name, and id which is used to identify artist to display artist's songs on the spotify player. 
