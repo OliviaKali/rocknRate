@@ -9,17 +9,26 @@ https://rocknrates.herokuapp.com
 
 ## Built with
 
-Node, Express, MySQL, Spotify API, Sequelize, Bulma, Materialize, Passport, Spotify-Passport
-
-## Code
+Node, Express, MySQL, Spotify API, Sequelize, Bulma, Materialize, Passport, Spotify-Passport.
 
 MVC Folder Structure to keep files organized
 
 
 ### APIs
 
-Spotify API used for image, artist name, and id which is used to identify artist to display artist's songs on the spotify player. Node-Spotify is used to pull the information in the backend, which is pushed to the frontend. 
-Spotify key is hidden through .env and added to heroku to be able to deploy it without compromising the keys.
+Spotify API used for image, artist name, and id which is used to identify artist to display artist's songs on the spotify player. 
+```
+ spotify
+    .search({ type: "artist", query: req.body.artist, limit: 3 })
+    .then(function(response) {
+      var artistName = response.artists.items[0].name;
+      var artistGenres = response.artists.items[0].genres;
+      var imageUrl = response.artists.items[0].images[0].url;
+      var artistID = response.artists.items[0].id;
+```
+
+Node-Spotify is used to pull the information in the backend, which is pushed to the frontend and appended onto the page to display the requested information. 
+The Spotify keys are hidden through .env and added to heroku to be able to deploy it without compromising the keys.
 
 ### Database/ MySQL
 
