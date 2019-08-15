@@ -10,7 +10,6 @@ https://rocknrates.herokuapp.com
 ## Built with
 
 Node, Express, MySQL, Spotify API, Sequelize, Bulma, Materialize, Passport, Spotify-Passport.
-
 MVC Folder Structure to keep files organized
 
 
