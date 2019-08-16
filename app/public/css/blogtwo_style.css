@@ -1,28 +1,17 @@
-/* body {
-    background-image: url("https://images.wallpaperscraft.com/image/headphones_bw_headset_120277_1920x1080.jpg")
-} */
-
 #artistImageDiv{
     margin-top: 10px;
-
 }
 
 .spotifyPlayer {
     margin-top: 10px;
-
     background: white;
     border-radius: 10px;
-
     margin-left: 10px;
 }
 
 #blogLogin {
     color: white;
-    /* margin-right: 10px; */
-    /* float: right;
-    display: block; */
     margin-left: 10px;
-
 }
 
 #rocknrate{

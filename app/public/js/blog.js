@@ -1,92 +1,78 @@
 $(document).on("click", "#blog-submit", function(event) {
   event.preventDefault();
-  var routeName = $(".title").attr("value")
+  var routeName = $(".title").attr("value");
 
   var newBlog = {
-    author: $("#author").val().trim(),
-    rating: $("#rating").val().trim(),
-    body: $("#blog-box").val().trim(),
+    author: $("#author")
+      .val()
+      .trim(),
+    rating: $("#rating")
+      .val()
+      .trim(),
+    body: $("#blog-box")
+      .val()
+      .trim(),
     created_at: moment().format("YYYY-MM-DD HH:mm:ss"),
     artist: routeName
   };
-  console.log(newBlog)
+  console.log(newBlog);
 
   $.post("/api/new", newBlog)
     // On success, run the following code
     .then(function() {
-
       var row = $("<div>");
       row.addClass("blog");
 
       row.append(`<div class="column is-full">
       <p>At ${moment(newBlog.created_at).format("h:mma on dddd")}</p>
-     <p>${newBlog.author} blogged...</p>
-     <p>Rating: ${newBlog.rating}</p>
-    <p>${newBlog.body}</p>
-    </div>`)
-
-      // row.append("<p>At " + moment(newBlog.created_at).format("h:mma on dddd") + "</p>");
-      // row.append("<p>" + newBlog.author + " blogged.. </p>");
-      // row.append("<p>Rating" + newBlog.rating + " </p>");
-      // row.append("<p>" + newBlog.body + "</p>");
-      // row.append("<p>" + newBlog.artist + "</p>");
+      <p>${newBlog.author} blogged...</p>
+      <p>Rating: ${newBlog.rating}</p>
+      <p>${newBlog.body}</p>
+      </div>`);
 
       $("#blog-area").prepend(row);
-
     });
 
-  // Empty each input box by replacing the value with an empty string
   $("#author").val("");
   $("#rating").val("");
   $("#blog-box").val("");
   $("#artist").val("");
 });
 
-// When the page loads, grab all of our chirps
 $("#get-blog").on("click", function(event) {
-  var routeName = $(".title").attr("value")
-  console.log(routeName)
+  var routeName = $(".title").attr("value");
+  console.log(routeName);
 
   $.ajax({
     method: "GET",
     url: `/blog/${routeName}`
   }).then(function(data) {
-    displayBlog(data)
-    createForm(data)
-  })
-})
+    displayBlog(data);
+    createForm(data);
+  });
+});
 
 function displayBlog(data) {
   if (data.length !== 0) {
-
     for (var i = 0; i < data.length; i++) {
-
       var row = $("<div>");
       row.addClass("blog");
       row.append(`<div class="column is-full">
       <p>At ${moment(data[i].created_at).format("h:mma on dddd")}</p>
-     <p>${data[i].blogAuthor} blogged...</p>
-     <p>Rating: ${data[i].blogRating}</p>
-    <p>${data[i].blogBody}</p>
-    </div>`)
-
-      // row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-      // row.append("<p>" + data[i].blogAuthor + " blogged.. </p>");
-      // row.append("<p>Rating: " + data[i].blogRating + " </p>");
-      // row.append("<p>" + data[i].blogBody + "</p>");
-      // // row.append("<p>" + data[i].artist + "</p>");
+      <p>${data[i].blogAuthor} blogged...</p>
+      <p>Rating: ${data[i].blogRating}</p>
+      <p>${data[i].blogBody}</p>
+      </div>`);
 
       $("#blog-area").prepend(row);
-
     }
-
   }
 }
 
 function createForm(data) {
   // create html form
   $("#blogComments").html(
-  ` <div class="row">
+    ` <div class="row">
   <div class="col-sm-5 col-sm-offset-2" style="color: white">
 
   <h2>Blogger Name:</h2>
@@ -112,14 +98,3 @@ function createForm(data) {
 </div>`
   );
 }
-
-
-
-
-
-
-
-
-
-
-

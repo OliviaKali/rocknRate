@@ -14,14 +14,6 @@ $(document).ready(function() {
     var url = "/artist?s=" + encodeURIComponent(userInput);
     $(location).attr("href", url);
   });
-
-  // $("#userSearchNav").on("click", function() {
-  //   event.preventDefault();
-  //   var userInput = $("#userInput")
-  //     .val()
-  //     .trim();
-  //   searchArtist(userInput);
-  // });
 });
 
 function searchArtist(userInput) {
@@ -44,7 +36,6 @@ function searchArtist(userInput) {
               <p class="title" value="${response.name}">${response.name}</p>
               <img id="artistImage" class="imageSize" src="${response.image}" />
       </article>`
-      // <p>Genres: ${response.genres}</p>
     );
   });
 }
