@@ -12,6 +12,23 @@ https://rocknrates.herokuapp.com
 Node, Express, MySQL, Spotify API, Sequelize, Bulma, Materialize, Passport, Spotify-Passport.
 MVC Folder Structure to keep files organized
 
+## UI
+
+Created with Bulma
+Bulma allows for a very responsive design out of the gate by using flexbox, along with some different keywords like hero, tiles, has, is, level, and more. Exaples of that would be
+```
+<div class="tile is-parent margin-left">
+       <article class="tile is-child box">
+       <p class="title">Blog/Comments</p>
+       <p class="subtitle">Aligned with the right column</p>
+       <nav class="level">
+       <div class="level-left">
+       <div class="level-item">
+      <a class="button is-info">Submit</a>
+```
+	
+
+
 
 ### APIs
 
