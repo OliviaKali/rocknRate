@@ -46,6 +46,25 @@ The user is prompted to fill out their name, rating, and comment/blog entry. The
       }
     })
 	```
+### Passport/ Passport-Spotify
+
+Passport allows users to authenticate themselves on the website.  This can be done locally or with a 3rd party website such as Google, Spotify, Facebook, etc.  The ability to login helps users store their data in a profile.  In this case, we are able to access information from Spotify to display to the users on the website.  
+
+```
+  app.get('/auth/spotify', passport.authenticate('spotify', {
+    scope: ['user-read-email']
+}
+  // The request will be redirected to spotify for authentication, so this
+  // function will not be called.
+));
+  // app.get('/auth/spotify', passport.authenticate('spotify', {
+  //     scope: ['user-read-email']
+  // }
+  //   // The request will be redirected to spotify for authentication, so this
+  //   // function will not be called.
+  // ));
+  ```
+
 
 ### Future Development
 <ul>
